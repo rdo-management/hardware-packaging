@@ -8,7 +8,7 @@
 Name:           python-hardware
 Summary:        Hardware detection and classification utilities
 Version:        0.14
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        ASL 2.0
 Group:          Development/Languages
 URL:            https://pypi.python.org/pypi/hardware
@@ -37,6 +37,8 @@ Requires: pexpect
 Requires: python-ptyprocess
 Requires: python-pandas
 Requires: python-pbr
+Requires: fio
+Requires: sysbench
 
 
 %prep
@@ -135,9 +137,11 @@ Documentation for Hardware detection and classification utilities.
 %endif # with_python3
 
 %changelog
+* Tue May 26 2015 John Trowbridge <trown@redhat.com> - 0.14-3
+- Add fio and sysbench to requirements
+
 * Tue May 05 2015 Haïkel Guémar <hguemar@fedoraproject> - 0.14-2
 - Fix requirements
-- Add a patch to improve output of cardiff from John Trowbridge
 
 * Tue Mar 31 2015 Frederic Lepied <frederic.lepied@redhat.com> - 0.14-1
 - new version (bug #1196176)
